@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr"> <!--Sayfa dili türkçe-->
+<head>
+    <meta charset="UTF-8"> <!--Karaktar set UTF-8-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive tasarımlar için.-->
+    <title>Forms</title>
+</head>
+<body>  
+    <!--Form etiketimizi açıyoruz.-->
+    <form>
+        <!--label ile input içerisine girilecek bilgiyi kullanıcıya gösteriyoruz.-->
+        <label for="isim">İsim</label> <br>
+
+
+
+
+        <!--input ile kullanıcının bilgi girmesi için bir kutucuk açıyoruz.-->
+        <!--name attribute ile php tarafında yakalnamsını istiyorsak doldurmamız gerekir.-->
+        <!--type attribute ile text olduğunu belirttik.-->
+        <!--id ile label for attribute arasında köprü kurduk.********-->
+        <input type="text" id="isim" name="isim"> <br>
+         <!---->
+
+        <!--input type ile farklı parametler gönderebiliriz.-->
+        <label for ="email">E-mail</label><br>
+        <!--input type email yaptığımız için kulllanıcı mail adresi girmez ise kullanıcıya bilgi mesajı veriyor.-->
+        <input type="email" name="email" id="email"><br>
+        
+        <label for="sifre">Şifre</label><br>
+        <input type="password" name="sifre" id="sifre"><br><!--Şifreler için-->
+
+        <label for="telefon">Telefon</label><br>
+        <input type="tel" name="telefon" id="telefon"><br> <!--Telefon bilgisi için-->
+
+        <lable for="tarih">Tarih</lable> <br>
+        <input type="date" name="tarih" id="tarih"> <br> <!--tarih bilgisi için-->
+
+        <!--RADİO buttonlar tek bir seçeneğin belirlenmesini sağlar.-->
+        Cinsiyet <br>
+        <!--********name attribute ile iki farklı seçenekten sadece tek bir tanesini almamızı sağlar.-->
+        <input type="radio" name="cinsiyet" id="erkek"> 
+        Erkek
+        <input type="radio" name="cinsiyet" id="kadin">
+        Kadın
+        <input type="radio" name="cinsiyet" id="diger" checked><!--Checked attribute ile sayfa açılınca seçilmiş olarak gelmesini sağlayabiliriz.-->
+        Diğer<br>
+
+
+
+        <!--Chackbox oluşturma işlemi-->
+
+        Hobiler <br>
+        
+        <!--Checkboxlar name ve id bulunduğu özelliğe göre farklı olabilir.-->
+        <!--Chackboxlar birden fazla seçim olabilir.-->
+        <input type="checkbox" name="motosiklet" id="motosiklet">
+        Motorsiklet
+        <input type="checkbox" name="bilgisayar" id="bilgisayar">
+        Bilgisayar
+        <input type="checkbox" name="spor" id="spor">
+        Spor<br>
+
+        <!--SelecList kullanımı şu şekildedir.-->
+        <!--name özelliğine dikkat edilecek select etiketi açılır.-->
+        <!--daha sonra select listesinin alt elemanları option etiketi ile kullanılır.-->
+        
+        Öğrenim<br>
+        <select name="ögrenim" id="ogrenim">
+            <!--value attribute ile liste elemanları girilir.-->
+            <option value="lise">Lise</option>
+            <option value="onlisans">Önlisans</option>
+            <option value="lisans">Lisans</option>
+            <option value="yukseklisans">Yükseklisans</option>
+        </select><br>
+
+        <!--Textarea cols ve rows ile görünür kısımda satır ve sutun olacağını belirtmek.-->
+        <!--Placeholder ile form elemanı içerisine geçici bir yazı yazabiliriz.-->
+        <textarea name="hakkinda" id="hakkinda" cols="30" rows="10" placeholder="Kendinizden bahsedin.."></textarea><br>
+
+        <!--Submit butonu yardımıyla bilgileri form action gönderebiliriz.-->
+        <button type="submit">Gönder</button>
+        <!--reset butonu sayesinde form içerisinde bilgileri temizleyebiliriz.-->
+        <button type="reset">Temizle</button>
+    </form>
+    
+</body>
+</html>
+
+
+<!--Label etiketi for ile input etiketi id ile ikisi arasında köprü bağlantısı kurabiliyoruz.-->
+<!--Her form elamanımızın name id ve placeholder özelliği olabilir.-->
